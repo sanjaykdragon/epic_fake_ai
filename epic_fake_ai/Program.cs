@@ -20,6 +20,12 @@ namespace epic_fake_ai
 
             while (true)
             {
+                if (possible_nums.Count <= 0)
+                {
+                    Console.WriteLine("stop trying to break the game");
+                    possible_nums = valid_numbers;
+                }
+
                 int guessed_int = possible_nums[rnd.Next(0, possible_nums.Count)];
                 Console.WriteLine("is the number {0}?", guessed_int);
 
